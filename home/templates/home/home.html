@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Django Test & Tutorials</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>My Django Test & Tutorials</h1>
+
+    <p>This project main purpose is to host all of my Django tutorials, demos, test, and training apps.</p>
+</div>
+
+
+<div class="container">
+    <h3>User Added Apps</h3>
+    <ul>
+        {% for app in user_apps %}
+            <li>
+                <a href="/{{ app }}">{{ app }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="container">
+    <h3>Default Apps</h3>
+    <ul>
+        {% for app in default_apps %}
+            <li>
+                {{ app }}
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+</body>
+</html>
