@@ -1,0 +1,17 @@
+{% extends 'forms/base.html' %}
+
+{% block content %}
+    <h1>View Post</h1>
+    <div class="post-entry">
+        <h2>{{ object.name }}</h2>
+        <p>{{ object.url }}</p>
+        <p>{{ object.output }}</p>
+    </div>
+    <div>
+        <a href="{% url 'post_edit' object.pk %}">+ Edit Post</a>
+        <a href="{% url 'post_delete' object.pk %}">+ Delete Post</a>
+    </div>
+{% endblock content %}
+
+
+

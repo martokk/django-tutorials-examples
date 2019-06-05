@@ -1,0 +1,14 @@
+{% extends 'forms/base.html' %}
+
+{% block content %}
+    <h1>List Posts</h1>
+    {% for object in object_list %}
+        <div class="post-entry">
+            <h2><a href="{% url 'post_view' object.pk %}">{{ object.name }}</a></h2>
+            <p>{{ object.url }}</p>
+            <p>{{ object.output }}</p>
+        </div>
+    {% endfor %}
+{% endblock content %}
+
+

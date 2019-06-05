@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorials</title>
+</head>
+<body>
+
+<div class="nav">
+    <a href="{% url 'post_list' %}">List Posts</a>
+    <a href="{% url 'post_add' %}">Add Post</a>
+
+</div>
+
+{% block content %}
+{% endblock content %}
+
+</body>
+</html>
