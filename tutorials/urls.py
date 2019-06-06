@@ -17,6 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 from home import views
 
+# Added for 'import_and_edit_excel' app
+from django.conf import settings
+from django.conf.urls.static import static
+
+
+
 urlpatterns = [
     path('', views.home, name='home'),
     path('home/', views.home, name='home'),
@@ -24,4 +30,9 @@ urlpatterns = [
     path('todo/', include('todo.urls')),
     path('forms/', include('forms.urls')),
     path('formset/', include('formset.urls')),
+    path('import_and_edit_excel/', include('import_and_edit_excel.urls')),
 ]
+
+# Added for 'import_and_edit_excel' app
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

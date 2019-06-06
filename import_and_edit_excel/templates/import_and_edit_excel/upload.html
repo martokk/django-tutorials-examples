@@ -1,0 +1,27 @@
+{% extends 'import_and_edit_excel/base.html' %}
+
+{% block content %}
+
+    <!-- Serve Upload Form -->
+    {% if not uploaded_file_url %}
+        <h2>Upload Excel File</h2>
+        <small>NOTE: Example files located in '/import_and_edit_excel/example_files_to_import' folder.</small>
+        <br><br>
+        <div class="container">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <input type="file" name="document">
+            <button type="submit">Upload</button>
+        </form>
+
+    <!-- Serve Next Step Links -->
+    {% else %}
+        <h2>Successfully Uploaded File!</h2>
+        <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+        <p><a href="{% url 'build_report' %}?uploaded_file_url={{ uploaded_file_url}}">Click Here</a> to run automation script against file and save the file.</p>
+    {% endif %}
+</div>
+
+
+{% endblock content %}

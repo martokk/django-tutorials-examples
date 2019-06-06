@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'formset',
     'external_script',
     'management_commands',
+    'import_and_edit_excel',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# Added for 'import_and_edit_excel' app
+MEDIA_URL = '/home/martokk/PycharmProjects/tutorials/media/' #Where to save files
+MEDIA_ROOT = 'media/' #Where to serve files

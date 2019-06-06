@@ -1,0 +1,14 @@
+{% extends 'import_and_edit_excel/base.html' %}
+
+{% block content %}
+
+    <!-- Serve Upload Form -->
+
+        <h2>Build Report Complete</h2>
+
+    <div><b>Uploaded File:</b> <a href="file:///{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></div><br><br>
+    <div><b>Edited Report File:</b> <a href="file:///{{ saved_file_url }}">{{ saved_file_url }}</a></div>
+
+
+
+{% endblock content %}
