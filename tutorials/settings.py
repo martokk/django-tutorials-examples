@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'home',
     'todo',
     'forms',
+    'external_script',
 ]
 
 MIDDLEWARE = [
