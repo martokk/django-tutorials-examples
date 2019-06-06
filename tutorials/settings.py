@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'forms',
     'formset',
     'external_script',
+    'management_commands',
 ]
 
 MIDDLEWARE = [
